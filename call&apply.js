@@ -2,7 +2,7 @@
 // The call() and apply() method calls a function with a given "this" value. The difference between call() and apply() is,
 //if there are any parameters used in the function then they are listed one after the other using comma as a seperator
 //in the call() method and they are listed in array and passed as 1 arg.
-// Created by subha jan 1, 2017
+// Created by subha aug, 2017
 var obj1 = {
     name : 'subha',
     age : '38',
