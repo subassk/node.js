@@ -1,0 +1,34 @@
+// Example to create a prototype function for an object.
+// Any object created from the function(new) constructor, its prototype points to the prototype
+// property of the function(Person) that is used to construct the object(suba or ssk).
+// When we see the .prototype property, it means that we are creating properties and properties that
+// are avialable to all objects that are created using the function construtor
+// Created By Subha on Aug,2017
+function Person(firstname, lastname){
+    this.firstname = firstname;
+    this.lastname =lastname;
+}
+
+Person.prototype.greet=function(){
+    console.log('hello!' +' '+ this.firstname + ' '+this.lastname);
+};
+
+var suba = new Person('Subha','Cheran');
+var ssk = new Person('SSk','Sita');
+
+suba.greet();
+//hello! Subha Cheran
+
+ssk.greet();
+//hello! SSk Sita
+
+// use __proto__ go view the actual prototype
+
+console.log(suba.__proto__);
+//Person { greet: [Function] }
+console.log(ssk.__proto__);
+//Person { greet: [Function] }
+
+//  check if both the object have the same prototype property.
+console.log(suba.__proto__ === ssk.__proto__);
+//true
